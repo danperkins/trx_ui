@@ -28,8 +28,9 @@ jobs:
       run: |
         npm install
         npm run build
+        cp dist/index.html dist/trx_ui
           
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: dist
+        folder: dist/trx_ui
