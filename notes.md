@@ -10,10 +10,6 @@
 
 - Why is the '@/path' relative import not working?
 
-- TODO:
-    - Fix scrollable area of containers
-    - Add skeleton loaders
-
 ### Alterations to design
 - Did not have 'Basis Grotesque Pro' font -- used 'sans-serif' instead
 - Container header text on mobile is 24px line height and desktop is 20px -- kept 20px everywhere for consistency 
@@ -29,7 +25,7 @@
 - [x] Implement transaction card history
 - [x] Implement pending transaction cards
 - [x] Implement transaction card status toggle
-- [ ] Implement skeleton loader
+- [x] Implement skeleton loader
 - [x] Get deployment working
 - [ ] Revisit mobile panel layout
 
@@ -39,3 +35,7 @@
 - Support better 'refresh' or polling for transactions
 - Add 'fetchUser' API for greeting
 - Component mount/unmount transitions
+- Fix favicon
+- Revisit mobile panel layout
+- Update README
+- Add better aria labels for accessibility
