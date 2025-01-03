@@ -15,6 +15,9 @@ export function WidgetHeader(props: BoxProps) {
         padding: 6,
         height: "224px",
       }}
+      xl={{
+        height: "248px",
+      }}
       {...props}
     ></Box>
   );

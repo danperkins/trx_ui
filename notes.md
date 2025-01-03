@@ -6,12 +6,13 @@
 - Is there a way to add better type safety around tokens? ie: 
     background="{colors.sand.50}"
 
-
+- no Figma export permissions
 
 
 ### Alterations to design
 - Did not have 'Basis Grotesque Pro' font -- used 'sans-serif' instead
 - Container header on mobile is 24px line height and desktop is 20px -- kept 20px everywhere for consistency 
+- padding on active 'segmented control' isn't completely consistent.  Kept slightly smaller padding on XL size
 
 ### Overall workflow plan
 - [x] Bootstrap app

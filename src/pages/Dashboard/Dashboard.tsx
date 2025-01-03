@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { Greeting } from "./components/Greeting";
 import { WidgetPanel } from "./components/WidgetPanel";
 import { WidgetHeader } from "./components/WidgetHeader";
+import { TransactionPanel } from "./components/TransactionPanel/TransactionPanel";
 
 export function Dashboard() {
   return (
@@ -32,9 +33,9 @@ export function Dashboard() {
         gridTemplateColumns="1fr"
         lg={{ gridTemplateColumns: "1fr 1fr 1fr", gap: 3 }}
       >
-        <WidgetPanel display={{ base: "none", lg: "block" }}></WidgetPanel>
-        <WidgetPanel />
-        <WidgetPanel display={{ base: "none", lg: "block" }}></WidgetPanel>
+        <WidgetPanel display={{ base: "none", lg: "flex" }}></WidgetPanel>
+        <TransactionPanel />
+        <WidgetPanel display={{ base: "none", lg: "flex" }}></WidgetPanel>
       </Box>
     </Box>
   );
