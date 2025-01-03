@@ -18,6 +18,7 @@
 - Did not have 'Basis Grotesque Pro' font -- used 'sans-serif' instead
 - Container header text on mobile is 24px line height and desktop is 20px -- kept 20px everywhere for consistency 
 - padding on active 'segmented control' isn't completely consistent.  Kept slightly smaller padding on XL size
+- Question: Is the WidgetPanel expected to have a 'maxWidth'?
 
 ### Overall workflow plan
 - [x] Bootstrap app
@@ -34,3 +35,5 @@
 ### Next steps
 - Add 'copy' functionality for addresses since they will often be truncated
 - Storybook integration for easier design iteration
+- Support better 'refresh' or polling for transactions
+- Add 'fetchUser' API for greeting

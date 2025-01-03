@@ -3,8 +3,17 @@ import { Greeting } from "./components/Greeting";
 import { WidgetPanel } from "./components/WidgetPanel";
 import { WidgetHeader } from "./components/WidgetHeader";
 import { TransactionPanel } from "./components/TransactionPanel/TransactionPanel";
+import { useState, useEffect } from "react";
+import { sleep } from "../../utils";
+import { GreetingSkeleton } from "./components/GreetingSkeleton";
 
 export function Dashboard() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    sleep(1000 + Math.random() * 2000).then(() => setIsLoading(false));
+  }, []);
+
   return (
     <Box
       display="flex"
@@ -23,7 +32,7 @@ export function Dashboard() {
         lg={{ gridTemplateColumns: "1fr 1fr 1fr", gap: 3 }}
       >
         <WidgetHeader>
-          <Greeting />
+          {isLoading ? <GreetingSkeleton /> : <Greeting />}
         </WidgetHeader>
         <WidgetHeader display={{ base: "none", lg: "block" }} />
         <WidgetHeader display={{ base: "none", lg: "block" }} />
