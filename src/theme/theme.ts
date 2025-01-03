@@ -17,12 +17,21 @@ const config = defineConfig({
     breakpoints: {
       base: "0px",
       lg: "1280px",
+      xl: "1920px",
     },
     tokens: {
       colors: {
         sand: {
           50: {
             value: "#FBFAF8",
+          },
+          200: {
+            value: "#F4EFE9",
+          },
+        },
+        charcoal: {
+          400: {
+            value: "#6D6D6D",
           },
         },
       },
@@ -46,7 +55,6 @@ const config = defineConfig({
         },
       },
       lg: {
-        description: "Heading content",
         value: {
           fontFamily: "sans-serif",
           fontWeight: "400",
@@ -55,12 +63,19 @@ const config = defineConfig({
         },
       },
       xl: {
-        description: "Heading content (large)",
         value: {
           fontFamily: "sans-serif",
           fontWeight: "400",
           fontSize: "20px",
           lineHeight: "24px",
+        },
+      },
+      "2xl": {
+        value: {
+          fontFamily: "sans-serif",
+          fontWeight: "400",
+          fontSize: "18px",
+          lineHeight: "22px",
         },
       },
       "3xl": {
