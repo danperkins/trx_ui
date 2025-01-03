@@ -1,12 +1,8 @@
 import "./App.css";
-import { SkeletonCircle } from "./components/ui/skeleton";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
-  return (
-    <div>
-      <SkeletonCircle size="10" />
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;
