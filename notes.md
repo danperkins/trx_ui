@@ -8,6 +8,8 @@
 
 - no Figma export permissions
 
+- Why is the '@/path' relative import not working?
+
 
 ### Alterations to design
 - Did not have 'Basis Grotesque Pro' font -- used 'sans-serif' instead
@@ -17,11 +19,11 @@
 ### Overall workflow plan
 - [x] Bootstrap app
 - [x] Get some basic components/layout/structure in place
-- [ ] Start to implement the 'transaction' pane
-- [ ] Generate random transactions + load via 'API'
+- [x] Start to implement the 'transaction' pane
+- [x] Generate random transactions + load via 'API'
 - [ ] Implement transaction card history
-- [ ] Implement pending transaction cards
-- [ ] Implement transaction card status toggle
+- [x] Implement pending transaction cards
+- [x] Implement transaction card status toggle
 - [ ] Implement skeleton loader
 - [ ] Get deployment working
 - [ ] Revisit mobile panel layout

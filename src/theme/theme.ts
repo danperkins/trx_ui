@@ -30,8 +30,22 @@ const config = defineConfig({
           },
         },
         charcoal: {
+          base: {
+            value: "#232323",
+          },
+          300: {
+            value: "#969696",
+          },
           400: {
             value: "#6D6D6D",
+          },
+        },
+        sky: {
+          base: {
+            value: "#84A7FA",
+          },
+          600: {
+            value: "#7998E3",
           },
         },
       },
