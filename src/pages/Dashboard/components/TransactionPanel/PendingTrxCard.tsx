@@ -1,16 +1,16 @@
 import { PendingTransaction } from "../../../../types";
 import { TrxParties } from "./TrxParties";
 import { Box, Span, Text } from "@chakra-ui/react";
-import { UnitIcon } from "./UnitIcon";
 import { formatDistanceToNowStrict } from "date-fns";
+import { TrxSender } from "./TrxSender";
 
 export function PendingTrxCard({ trx }: { trx: PendingTransaction }) {
   return (
     <Box
       padding={{
-        base: "12px 8px 12px 8px",
-        lg: "20px 8px 20px 8px",
-        xl: "20px 12px 20px 12px",
+        base: "8px 12px 8px 12px",
+        lg: "8px 20px 8px 20px",
+        xl: "12px 20px 12px 20px",
       }}
       backgroundColor="white"
       boxShadow="0px 0px 4px 0px #E8DDD166"
@@ -19,19 +19,7 @@ export function PendingTrxCard({ trx }: { trx: PendingTransaction }) {
       overflow="hidden"
     >
       <TrxParties trx={trx} />
-      <Box display="flex" alignItems="center" paddingTop={1} paddingBottom={3}>
-        <UnitIcon trx={trx} />
-        <Text
-          flexShrink={1}
-          textStyle={{ base: "sm" }}
-          pl={1}
-          whiteSpace={"nowrap"}
-          textOverflow={"ellipsis"}
-          overflow="hidden"
-        >
-          {trx.sender}
-        </Text>
-      </Box>
+      <TrxSender trx={trx} />
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <Box
           display="flex"

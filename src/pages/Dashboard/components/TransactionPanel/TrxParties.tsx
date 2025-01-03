@@ -4,7 +4,7 @@ import { Box, Text, Span } from "@chakra-ui/react";
 export function TrxParties({ trx }: { trx: Transaction }) {
   return (
     <Box textAlign="left">
-      <Text color="{colors.charcoal.400}">
+      <Text textStyle="md" color="{colors.charcoal.400}">
         Sent{" "}
         <Span color="{colors.charcoal.base}">
           {trx.value} {trx.unit}

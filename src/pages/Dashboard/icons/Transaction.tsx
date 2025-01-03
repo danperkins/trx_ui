@@ -3,11 +3,18 @@ import { Box } from "@chakra-ui/react";
 // Taken from https://www.svgrepo.com/svg/1327/transfer
 export function Transaction() {
   return (
-    <Box base={{ w: 4, h: 4 }} lg={{ w: 5, h: 5 }} xl={{ w: 7, h: 7 }}>
+    <Box
+      base={{ w: 4, h: 4 }}
+      lg={{ w: 5, h: 5 }}
+      xl={{ w: 7, h: 7 }}
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
       <svg
         fill="#000000"
-        height="100%"
-        width="100%"
+        height="80%"
+        width="80%"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"

@@ -28,6 +28,9 @@ const config = defineConfig({
           200: {
             value: "#F4EFE9",
           },
+          950: {
+            value: "#5F5A55",
+          },
         },
         charcoal: {
           base: {
@@ -40,12 +43,27 @@ const config = defineConfig({
             value: "#6D6D6D",
           },
         },
+        orange: {
+          50: {
+            value: "#FCEDEA",
+          },
+          500: {
+            value: "#EA6640",
+          },
+        },
         sky: {
+          // Is this just '700'?
           base: {
             value: "#84A7FA",
           },
+          50: {
+            value: "#EFF2FE",
+          },
           600: {
             value: "#7998E3",
+          },
+          900: {
+            value: "#4C6090",
           },
         },
       },
