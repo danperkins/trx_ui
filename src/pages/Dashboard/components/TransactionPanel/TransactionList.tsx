@@ -62,12 +62,14 @@ export function TransactionList({
   selectedStatus: TransactionStatus;
 }) {
   return (
-    <Suspense fallback={<div>Loading</div>}>
-      {selectedStatus === "Pending" ? (
-        <PendingTransactionList />
-      ) : (
-        <TransactionHistoryList />
-      )}
-    </Suspense>
+    <Box overflow="scroll">
+      <Suspense fallback={<div>Loading</div>}>
+        {selectedStatus === "Pending" ? (
+          <PendingTransactionList />
+        ) : (
+          <TransactionHistoryList />
+        )}
+      </Suspense>
+    </Box>
   );
 }

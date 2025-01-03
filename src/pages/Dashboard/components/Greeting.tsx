@@ -6,7 +6,7 @@ export function Greeting() {
       <Text textStyle={{ base: "2xl", lg: "3xl" }}>
         Welcome,
         <br />
-        Dan Perkins,
+        Dan Perkins
       </Text>
     </div>
   );

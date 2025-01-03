@@ -15,6 +15,7 @@ export function WidgetPanel(props: BoxProps) {
       }}
       display="flex"
       flexDirection="column"
+      overflow="hidden"
       {...props}
     ></Box>
   );

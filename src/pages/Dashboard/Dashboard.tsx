@@ -9,10 +9,11 @@ export function Dashboard() {
     <Box
       display="flex"
       flexDirection="column"
-      minH="100vh"
       base={{ padding: 5 }}
       lg={{ padding: 6, paddingTop: 12 }}
       gap={{ base: 4, lg: 3 }}
+      height="100vh"
+      overflow="hidden"
     >
       <Box
         data-testid="widgets"
@@ -32,6 +33,7 @@ export function Dashboard() {
         flexGrow="1"
         gridTemplateColumns="1fr"
         lg={{ gridTemplateColumns: "1fr 1fr 1fr", gap: 3 }}
+        overflow="hidden"
       >
         <WidgetPanel display={{ base: "none", lg: "flex" }}></WidgetPanel>
         <TransactionPanel />
