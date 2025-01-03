@@ -7,12 +7,14 @@ export function GreetingSkeleton() {
         height={{ base: 5, lg: 11 }}
         width={{ base: "177px", lg: "333px" }}
         backgroundColor="white"
+        borderRadius={50}
       />
       <Skeleton
         height={{ base: 5, lg: 11 }}
         width={{ base: "135px", lg: "222px" }}
         backgroundColor="white"
         marginTop={{ base: 2, lg: 2.5 }}
+        borderRadius={50}
       />
     </Box>
   );

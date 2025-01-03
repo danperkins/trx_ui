@@ -1,7 +1,8 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Skeleton, Text } from "@chakra-ui/react";
 import { Transaction } from "../../icons/Transaction";
 import { SegmentedControl } from "../SegmentedControl";
 import { TransactionStatus } from "./constants";
+import { SkeletonCircle } from "../../../../components/ui/skeleton";
 
 export function TransactionPanelHeader({
   selectedStatus,
@@ -37,6 +38,24 @@ export function TransactionPanelHeader({
           onValueSelected={onSelectedStatusChange}
         />
       </Box>
+    </Box>
+  );
+}
+
+export function TransactionPanelHeaderSkeleton() {
+  return (
+    <Box display="flex" flexDirection="row" alignItems="center">
+      <SkeletonCircle
+        size={{ base: 8, lg: 11, xl: "60px" }}
+        backgroundColor="{colors.sand.200}"
+      />
+      <Skeleton
+        height={{ base: 4, lg: 5 }}
+        marginLeft={{ base: 2, lg: 4, xl: 3 }}
+        width={{ base: "159px" }}
+        backgroundColor="{colors.sand.200}"
+        borderRadius={50}
+      />
     </Box>
   );
 }

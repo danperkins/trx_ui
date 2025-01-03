@@ -2,7 +2,10 @@ import { Box } from "@chakra-ui/react";
 import { Greeting } from "./components/Greeting";
 import { WidgetPanel } from "./components/WidgetPanel";
 import { WidgetHeader } from "./components/WidgetHeader";
-import { TransactionPanel } from "./components/TransactionPanel/TransactionPanel";
+import {
+  TransactionPanel,
+  TransactionPanelSkeleton,
+} from "./components/TransactionPanel/TransactionPanel";
 import { useState, useEffect } from "react";
 import { sleep } from "../../utils";
 import { GreetingSkeleton } from "./components/GreetingSkeleton";
@@ -45,7 +48,7 @@ export function Dashboard() {
         overflow="hidden"
       >
         <WidgetPanel display={{ base: "none", lg: "flex" }}></WidgetPanel>
-        <TransactionPanel />
+        {isLoading ? <TransactionPanelSkeleton /> : <TransactionPanel />}
         <WidgetPanel display={{ base: "none", lg: "flex" }}></WidgetPanel>
       </Box>
     </Box>
