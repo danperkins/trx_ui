@@ -2,6 +2,7 @@ import { useState } from "react";
 import { WidgetPanel } from "../WidgetPanel";
 import { TransactionPanelHeader } from "./TransactionPanelHeader";
 import { TransactionStatus } from "./constants";
+import { TransactionList } from "./TransactionList";
 
 export function TransactionPanel() {
   const [selectedStatus, setSelectedStatus] =
@@ -12,6 +13,7 @@ export function TransactionPanel() {
         selectedStatus={selectedStatus}
         onSelectedStatusChange={setSelectedStatus}
       />
+      <TransactionList selectedStatus={selectedStatus} />
     </WidgetPanel>
   );
 }
