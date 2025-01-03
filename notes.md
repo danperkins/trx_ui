@@ -10,6 +10,9 @@
 
 - Why is the '@/path' relative import not working?
 
+- TODO:
+    - Fix scrollable area of containers
+    - Add skeleton loaders
 
 ### Alterations to design
 - Did not have 'Basis Grotesque Pro' font -- used 'sans-serif' instead

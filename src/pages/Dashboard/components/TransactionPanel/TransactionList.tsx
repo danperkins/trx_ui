@@ -4,13 +4,14 @@ import {
   getMockFinalizedTransactions,
   getMockPendingTransactions,
 } from "../../../../mocks/transactions";
-import { useQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { Box } from "@chakra-ui/react";
 import { PendingTrxCard } from "./PendingTrxCard";
 import { FinalizedTrxCard } from "./FinalizedTrxCard";
+import { Suspense } from "react";
 
 function TransactionHistoryList() {
-  const query = useQuery({
+  const query = useSuspenseQuery({
     queryKey: ["finalizedTransactions"],
     queryFn: async () => {
       await sleep(Math.random() * 4000);
@@ -20,7 +21,7 @@ function TransactionHistoryList() {
 
   // TODO: handle error status
   if (query.status !== "success") {
-    return query.status;
+    throw new Error("Loading");
   }
 
   return (
@@ -32,8 +33,8 @@ function TransactionHistoryList() {
   );
 }
 
-export function PendingTransactionList() {
-  const query = useQuery({
+function PendingTransactionList() {
+  const query = useSuspenseQuery({
     queryKey: ["pendingTransactions"],
     queryFn: async () => {
       await sleep(Math.random() * 4000);
@@ -43,7 +44,7 @@ export function PendingTransactionList() {
 
   // TODO: handle error status
   if (query.status !== "success") {
-    return query.status;
+    throw new Error("Loading");
   }
 
   return (
@@ -60,9 +61,13 @@ export function TransactionList({
 }: {
   selectedStatus: TransactionStatus;
 }) {
-  return selectedStatus === "Pending" ? (
-    <PendingTransactionList />
-  ) : (
-    <TransactionHistoryList />
+  return (
+    <Suspense fallback={<div>Loading</div>}>
+      {selectedStatus === "Pending" ? (
+        <PendingTransactionList />
+      ) : (
+        <TransactionHistoryList />
+      )}
+    </Suspense>
   );
 }

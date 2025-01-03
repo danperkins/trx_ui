@@ -59,7 +59,9 @@ function getMockPendingTransaction(): PendingTransaction {
 }
 
 export function getMockFinalizedTransactions() {
-  const trx: FinalizedTransaction[] = new Array(Math.floor(Math.random() * 15))
+  const trx: FinalizedTransaction[] = new Array(
+    Math.floor(Math.random() * 15) + 2,
+  )
     .fill(null)
     .map(() => getMockFinalizedTransaction())
     .sort(
@@ -70,7 +72,9 @@ export function getMockFinalizedTransactions() {
 }
 
 export function getMockPendingTransactions() {
-  const trx: PendingTransaction[] = new Array(Math.floor(Math.random() * 15))
+  const trx: PendingTransaction[] = new Array(
+    Math.floor(Math.random() * 15) + 2,
+  )
     .fill(null)
     .map(() => getMockPendingTransaction())
     .sort(
