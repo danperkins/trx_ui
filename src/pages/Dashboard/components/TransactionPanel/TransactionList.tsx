@@ -9,6 +9,7 @@ import { Box } from "@chakra-ui/react";
 import { PendingTrxCard } from "./PendingTrxCard";
 import { FinalizedTrxCard } from "./FinalizedTrxCard";
 import { Suspense } from "react";
+import { TrxSkeleton } from "./TrxSkeleton";
 
 function TransactionHistoryList() {
   const query = useSuspenseQuery({
@@ -63,13 +64,23 @@ export function TransactionList({
 }) {
   return (
     <Box overflow="scroll">
-      <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={<TransactionListSkeleton />}>
         {selectedStatus === "Pending" ? (
           <PendingTransactionList />
         ) : (
           <TransactionHistoryList />
         )}
       </Suspense>
+    </Box>
+  );
+}
+
+export function TransactionListSkeleton() {
+  return (
+    <Box display="flex" flexDirection="column" overflow="scroll" gap={2}>
+      {new Array(6).fill(null).map(() => (
+        <TrxSkeleton />
+      ))}
     </Box>
   );
 }

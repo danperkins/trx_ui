@@ -5,9 +5,7 @@ import {
   TransactionPanelHeaderSkeleton,
 } from "./TransactionPanelHeader";
 import { TransactionStatus } from "./constants";
-import { TransactionList } from "./TransactionList";
-import { TrxSkeleton } from "./TrxSkeleton";
-import { Box } from "@chakra-ui/react";
+import { TransactionList, TransactionListSkeleton } from "./TransactionList";
 
 export function TransactionPanel() {
   const [selectedStatus, setSelectedStatus] =
@@ -27,11 +25,7 @@ export function TransactionPanelSkeleton() {
   return (
     <WidgetPanel gap={{ base: 6, lg: 11 }}>
       <TransactionPanelHeaderSkeleton />
-      <Box display="flex" flexDirection="column" overflow="scroll" gap={2}>
-        {new Array(6).fill(null).map(() => (
-          <TrxSkeleton />
-        ))}
-      </Box>
+      <TransactionListSkeleton />
     </WidgetPanel>
   );
 }
